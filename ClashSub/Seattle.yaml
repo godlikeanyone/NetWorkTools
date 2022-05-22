@@ -1,0 +1,38 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - tls://c.passcloud.xyz
+    - tls://x.passcloud.xyz
+    - tls://b.iqiq.io:853
+    - tls://h.iqiq.io:853
+    - tls://i.passcloud.xyz:5432
+    - tls://a.passcloud.xyz:5432
+    - tls://162.14.132.109:853
+    - tls://162.14.132.76:853
+    - tls://v.233py.com
+  fake-ip-filter:
+    - "dns.msftncsi.com"
+    - "www.msftncsi.com"
+    - "www.msftconnecttest.com"
+proxies:
+  - {name: 🏳️‍🌈 洛杉矶（无限流量, server: 36.110.215.68, port: 443, type: vmess, uuid: b1381526-4952-47bd-b23e-e11a1117c43a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu1.qiqis.ml, network: ws, ws-opts: {path: /d08d9ff483/, headers: {Host: jixu1.qiqis.ml}}, udp: true}
+  - {name: 🏳️‍🌈 西雅图（无限流量, server: 117.161.143.162, port: 443, type: vmess, uuid: e78e812f-d7c1-41d8-98b5-a58feb5ec782, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu2.qiqis.ml, network: ws, ws-opts: {path: /d717c59cd2d8/, headers: {Host: jixu2.qiqis.ml}}, udp: true}
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - 🏳️‍🌈 洛杉矶→无限流量
+      - 🏳️‍🌈 西雅图→无限流量
+rules:
+ - DOMAIN, api.weibo.cn,Proxies
+ - DOMAIN-SUFFIX, weibo.com,Proxies
+ - DOMAIN, mp.weixin.qq.com,Proxies
+ - GEOIP,CN,DIRECT
+ - MATCH,Proxies
