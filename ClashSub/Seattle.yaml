@@ -23,7 +23,7 @@ dns:
     - "www.msftconnecttest.com"
 proxies:
   - {name: 🏳️‍🌈 广州移动→洛杉矶, server: 120.232.150.110, port: 443, type: vmess, uuid: b1381526-4952-47bd-b23e-e11a1117c43a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu1.qiqis.ml, network: ws, ws-opts: {path: /d08d9ff483/, headers: {Host: jixu1.qiqis.ml}}, udp: true}
-  - {name: 🏳️‍🌈 呼和浩特移动→西雅图, server: 117.161.143.162, port: 443, type: vmess, uuid: e78e812f-d7c1-41d8-98b5-a58feb5ec782, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu2.qiqis.ml, network: ws, ws-opts: {path: /d717c59cd2d8/, headers: {Host: jixu2.qiqis.ml}}, udp: true}
+  - {name: 🏳️‍🌈 江苏隧道→西雅图, server: 180.97.188.73, port: 443, type: vmess, uuid: e78e812f-d7c1-41d8-98b5-a58feb5ec782, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu2.qiqis.ml, network: ws, ws-opts: {path: /d717c59cd2d8/, headers: {Host: jixu2.qiqis.ml}}, udp: true}
   - {name: 🏳️‍🌈 华为云香港→西雅图, server: 159.138.130.126, port: 443, type: vmess, uuid: e78e812f-d7c1-41d8-98b5-a58feb5ec782, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu2.qiqis.ml, network: ws, ws-opts: {path: /d717c59cd2d8/, headers: {Host: jixu2.qiqis.ml}}, udp: true}
   - {name: 🏳️‍🌈 金山云北京→洛杉矶, server: 110.43.204.172, port: 443, type: vmess, uuid: b1381526-4952-47bd-b23e-e11a1117c43a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jixu1.qiqis.ml, network: ws, ws-opts: {path: /d08d9ff483/, headers: {Host: jixu1.qiqis.ml}}, udp: true}
 proxy-groups:
@@ -31,7 +31,7 @@ proxy-groups:
     type: select
     proxies:
       - 🏳️‍🌈 广州移动→洛杉矶
-      - 🏳️‍🌈 呼和浩特移动→西雅图
+      - 🏳️‍🌈 江苏隧道→西雅图
       - 🏳️‍🌈 华为云香港→西雅图
       - 🏳️‍🌈 金山云北京→洛杉矶
 rules:
